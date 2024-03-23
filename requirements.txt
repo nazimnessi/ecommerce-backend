@@ -1,0 +1,11 @@
+backports.zoneinfo==0.2.1
+Django==4.2.6
+mysqlclient==2.2.0 
+phonenumbers==8.13.8
+graphene_django==3.1.5
+django-filter==23.1
+djangorestframework==3.14.0
+flake8==3.9.2
+django-cors-headers==4.3.0
+requests
+weasyprint==60.1

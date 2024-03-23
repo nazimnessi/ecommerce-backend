@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  web:
+    depends_on:
+      - db
+    build: .
+    ports: 
+      - "8000:8000"
+    image: ecommerce:latest
+    restart: always
+    command: bash -c 
+        "python manage.py makemigrations
+        && python manage.py migrate
+        && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/ecommerce
+    tty: true
+  db:
+    image: mysql:latest
+    ports:
+      - '3306:3306'
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: testuser123
+      MYSQL_DATABASE: ecommerce_db
+    command: --default-authentication-plugin=mysql_native_password
