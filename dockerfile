@@ -4,10 +4,10 @@ RUN apt-get update \
     && pip install --upgrade pip \
     && rm -rf /var/lib/apt/lists/*
 
-RUN mkdir -p /rentmate 
+RUN mkdir -p /ecommerce 
 
-WORKDIR /rentmate
+WORKDIR /ecommerce
 
-COPY . /rentmate 
+COPY . /ecommerce 
 
 RUN pip install --no-cache-dir --upgrade -r requirements.txt

@@ -7,14 +7,14 @@ services:
     build: .
     ports: 
       - "8000:8000"
-    image: ecommerce-backend:latest
+    image: ecommerce:latest
     restart: always
     command: bash -c 
         "python manage.py makemigrations
         && python manage.py migrate
         && python manage.py runserver 0.0.0.0:8000"
     volumes:
-      - .:/ecommerce-backend
+      - .:/ecommerce
     tty: true
   db:
     image: mysql:latest
