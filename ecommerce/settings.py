@@ -79,7 +79,6 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -87,7 +86,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'testuser123',
         'HOST': 'db',
-        'PORT':'3306',
+        'PORT': '3306',
     }
 }
 

@@ -5,6 +5,7 @@ from django.core.exceptions import ValidationError
 
 # Create your models here.
 
+
 class Address(models.Model):
     address1 = models.CharField(max_length=100)
     address2 = models.CharField(max_length=100, blank=True)
@@ -16,6 +17,7 @@ class Address(models.Model):
 
     def __str__(self):
         return f'{self.address1}, {self.address2}, {self.city}, {self.state} {self.postal_code}'
+
 
 class User(AbstractUser):
     Role_choice = (
