@@ -41,7 +41,15 @@ INSTALLED_APPS = [
     # apps
     "product",
     'user',
+
+    # external modules
+    "graphene_django",
+    "django_filters",
+    "rest_framework",
 ]
+GRAPHENE = {
+    "SCHEMA": "ecommerce.schema.schema",
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
